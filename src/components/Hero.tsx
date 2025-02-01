@@ -2,13 +2,13 @@ import React from 'react';
 import Button from './Button';
 import { motion } from 'framer-motion';
 import splitStringUsingRegex from '../utils/splitStringUsingRegex';
-
+import olympoleLogo from '../assets/olympole logo.svg';
 const Hero: React.FC = () => {
     const titleChars = splitStringUsingRegex("Meet us on Olympole!");
 
     return (
         <section className="w-full flex flex-col items-center p-10 gap-5 md:pt-20 md:gap-10">
-            <img src="src/assets/olympole logo.svg" alt="Olympole Logo" className="w-40" />
+            <img src={olympoleLogo} alt="Olympole Logo" className="w-40" />
             <h1 className="text-3xl text-center font-semibold mt-5">
                 {titleChars.map((char, index) => (
                     <motion.span

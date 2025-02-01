@@ -71,7 +71,7 @@ const Section: React.FC<SectionProps> = ({ title, text, image, align, link }) =>
                     </p>
                 ))}
 
-                <a href={link}>
+                <a href={link} target="_blank" rel="noreferrer">
                     <Button text="Register Now!" />
                 </a>
             </motion.div>
