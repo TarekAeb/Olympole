@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 interface SectionProps {
     title: string;
     text: string[];
-    image: string;
+    image: React.ImgHTMLAttributes<HTMLImageElement>["src"];
     align?: "left" | "right";
     link: string;
 }
