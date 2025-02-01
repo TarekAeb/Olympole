@@ -30,7 +30,7 @@ const faqs = [
     },
     {
         question: "Can I participate in the activities if I am not a student at ENSIA?",
-        answer: "Yes, the event is open to students from all universities and schools.",
+        answer: "Yes, the event is open to all students from Abdelhafid Boussouf pole.",
     }
 ];
 
