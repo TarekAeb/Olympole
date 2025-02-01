@@ -9,7 +9,7 @@ import basketballImage from "./assets/basketball.jpg";
 import cleaningImage from "./assets/cleaning.jpg";
 import drawingImage from "./assets/drawing.jpg";
 import chessImage from "./assets/chess.jpg";
-import puzzleImage from "./assets/puzzle.jpg";
+import knowledgeImage from "./assets/knowledge.jpg";
 import mathImage from "./assets/math.jpg";
 import FAQ from "./components/FAQ";
 
@@ -29,7 +29,7 @@ const sections: { title: string; text: string[]; image: string; align: 'left' | 
     link: "https://docs.google.com/forms/d/e/1FAIpQLSfFLxjb2QZyenwwXEiVQvg2nPjLKWMXoh4vRXgJ8_R8POx5kA/viewform"
   },
   {
-    title: "The Marathon & Dual Sprints",
+    title: "The Racing & Dual Sprints",
     text: ["Step into you running shoes and be part of an unforgettable marathon experience"],
     image: runningImage,
     align: 'right',
@@ -73,7 +73,7 @@ const sections: { title: string; text: string[]; image: string; align: 'left' | 
   {
     title: "Knowledge Cup",
     text: ["A battle of Brains at OlymPôle!", "Get ready for a mental showdown between schools! and show us your problem solving skills"],
-    image: puzzleImage,
+    image: knowledgeImage,
     align: 'right',
     link: "https://docs.google.com/forms/d/e/1FAIpQLSccZ9z92ES6m46pMs3QBKlzs5tuZvVCv_G412TEX0Xxve5Xyw/viewform"
   },
