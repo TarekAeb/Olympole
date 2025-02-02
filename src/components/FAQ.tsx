@@ -8,7 +8,7 @@ const faqs = [
         answer: (
             <>
                 Yes! You can apply as an organizer by filling out{" "}
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOrganizerForm/viewform" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline font-semibold">
+                <a href="https://forms.gle/di5chhdAZFQW4wiHA" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline font-semibold">
                     this form
                 </a>.
             </>
