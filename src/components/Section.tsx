@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 import { motion } from "framer-motion";
@@ -6,21 +6,20 @@ import { motion } from "framer-motion";
 interface SectionProps {
     title: string;
     text: string[];
+    readmore?: string;
     image: React.ImgHTMLAttributes<HTMLImageElement>["src"];
     align?: "left" | "right";
     link: string;
 }
 
-const Section: React.FC<SectionProps> = ({ title, text, image, align, link }) => {
+const Section: React.FC<SectionProps> = ({ title, text, readmore, image, align, link }) => {
+    const [showReadMore, setShowReadMore] = useState(false);
     const titleChars = splitStringUsingRegex(title);
     const textChars: string[][] = text.map((t) => splitStringUsingRegex(t));
 
     return (
         <section className={`p-8 w-full flex flex-col items-center gap-8 md:justify-around md:items-center ${align === "left" ? "md:flex-row-reverse" : "md:flex-row"}`}>
-
-            {/* Container without hover effect */}
             <div className="md:max-w-[50%] rounded-xl overflow-hidden shadow-lg w-80 h-[400px] md:w-96 md:h-[400px]">
-                {/* Image with hover effect only on the image itself */}
                 <motion.img
                     src={image}
                     alt={title}
@@ -33,9 +32,8 @@ const Section: React.FC<SectionProps> = ({ title, text, image, align, link }) =>
                 />
             </div>
 
-            {/* Text Section */}
             <motion.div
-                className="flex flex-col items-center gap-4 md:max-w-[400px] text-center"
+                className="flex flex-col items-center gap-4 md:max-w-[40%] text-center"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -70,6 +68,24 @@ const Section: React.FC<SectionProps> = ({ title, text, image, align, link }) =>
                         ))}
                     </p>
                 ))}
+                {readmore && (
+                    <>
+                        <button
+                            onClick={() => setShowReadMore(!showReadMore)}
+                            className="text-blue-500 underline cursor-pointer"
+                        >
+                            {showReadMore ? "Read Less" : "Read More"}
+                        </button>
+                        <motion.p
+                            className="text-lg"
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: showReadMore ? 1 : 0, height: showReadMore ? "auto" : 0 }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                        >
+                            {readmore}
+                        </motion.p>
+                    </>
+                )}
 
                 <a href={link} target="_blank" rel="noreferrer">
                     <Button text="Register Now!" />
