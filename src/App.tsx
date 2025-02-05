@@ -49,7 +49,7 @@ const sections: { title: string; text: string[]; readmore?: string; image: strin
   {
     title: "Basketball",
     text: ["Dribble, shoot, and score! Join us for a basketball showdown!"],
-    // readmore: "",
+    readmore: "The teams consist of 6 members with 1 additional replacement (optional).",
     image: basketballImage,
     align: "right",
     link: "https://docs.google.com/forms/d/e/1FAIpQLSfY6G-Z5tFYzPRyF283MeCGQ0_E3ioUSNtQfCKyhvvl4oTzsw/viewform"
